@@ -26,8 +26,8 @@
     self = [super init];
     if (self) {
         /* Set default values */
-        _code = dictionary[@"id"];
-        _name = dictionary[@"properties"][@"name"];
+        _code = dictionary[@"properties"][@"ISO_A3"];
+        _name = dictionary[@"properties"][@"NAME"];
         
         /* Extract additional info from the code */
         APCountryInfoBuilder *infoBuilder = [APCountryInfoBuilder builderWithCountryCode:_code];

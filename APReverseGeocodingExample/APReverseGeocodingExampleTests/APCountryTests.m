@@ -20,8 +20,8 @@
     
     NSString *countryId = @"USA";
     NSString *countryName = @"United States";
-    
-    NSDictionary *geoDictionary = @{@"id":countryId, @"properties":@{@"name":countryName}};
+
+    NSDictionary *geoDictionary = @{@"properties":@{@"NAME":countryName, @"ISO_A3": countryId}};
     
     APCountry *country = [APCountry countryWithGEODictionary:geoDictionary];
     XCTAssertEqual(country.code, countryId);

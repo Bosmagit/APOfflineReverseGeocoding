@@ -27,7 +27,7 @@
 /* Multipolygon */
 - (void)testNewYorkCoordinatesGeocodesUSA
 {
-    CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(40.7142700, -74.0059700);
+    CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(40.61643493, -73.99224019);
     APReverseGeocoding *geocoding = [APReverseGeocoding defaultGeocoding];
     APCountry *country = [geocoding geocodeCountryWithCoordinate:coordinate];
     
@@ -42,6 +42,26 @@
     APCountry *country = [geocoding geocodeCountryWithCoordinate:coordinate];
     
     XCTAssertTrue([country.code isEqualToString:@"UKR"]);
+}
+
+/* Polygon */
+- (void)testSingaporeCoordinatesGeocodesSingapore
+{
+    CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(1.352083, 103.819839);
+    APReverseGeocoding *geocoding = [APReverseGeocoding defaultGeocoding];
+    APCountry *country = [geocoding geocodeCountryWithCoordinate:coordinate];
+
+    XCTAssertTrue([country.code isEqualToString:@"SGP"]);
+}
+
+/* Polygon */
+- (void)testHongkongCoordinatesGeocodesHongkong
+{
+    CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(22.396427, 114.109497);
+    APReverseGeocoding *geocoding = [APReverseGeocoding defaultGeocoding];
+    APCountry *country = [geocoding geocodeCountryWithCoordinate:coordinate];
+    
+    XCTAssertTrue([country.code isEqualToString:@"HKG"]);
 }
 
 - (void)testPerformanceNewYorkGeocoding {
