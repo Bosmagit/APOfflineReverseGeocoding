@@ -30,25 +30,25 @@
 - (instancetype)initWithGeoDictionary:(NSDictionary *)dictionary NS_DESIGNATED_INITIALIZER;
 
 /* Represents country 3 digits code ISO 3166-1 Alpha 3 */
-@property (nonatomic, copy, readonly) NSString *code;
+@property (nonatomic, copy, readonly, nullable) NSString *code;
 
 /* Represents country 2 digits code ISO 3166-1 Alpha 2 */
-@property (nonatomic, copy, readonly) NSString *shortCode;
+@property (nonatomic, copy, readonly, nullable) NSString *shortCode;
 
 /* Represents country name */
-@property (nonatomic, copy, readonly) NSString *name;
+@property (nonatomic, copy, readonly, nullable) NSString *name;
 
 /* Represents country name in current locale */
-@property (nonatomic, copy, readonly) NSString *localizedName;
+@property (nonatomic, copy, readonly, nullable) NSString *localizedName;
 
 /* Represents country currency code */
-@property (nonatomic, copy, readonly) NSString *currencyCode;
+@property (nonatomic, copy, readonly, nullable) NSString *currencyCode;
 
 /* Represents country currency symbol */
-@property (nonatomic, copy, readonly) NSString *currencySymbol;
+@property (nonatomic, copy, readonly, nullable) NSString *currencySymbol;
 
 /* Represents country calendar */
-@property (nonatomic, strong, readonly) NSCalendar *calendar;
+@property (nonatomic, strong, readonly, nullable) NSCalendar *calendar;
 
 @end
 
