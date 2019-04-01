@@ -18,7 +18,7 @@
  *
  *  @return APCountry
  */
-+ (instancetype)countryWithGEODictionary:(NSDictionary *)dictionary;
++ (instancetype _Nonnull)countryWithGEODictionary:(NSDictionary * _Nonnull)dictionary;
 
 /**
  *  Designated initializer.
@@ -27,7 +27,7 @@
  *
  *  @return APCountry
  */
-- (instancetype)initWithGeoDictionary:(NSDictionary *)dictionary NS_DESIGNATED_INITIALIZER;
+- (instancetype _Nullable)initWithGeoDictionary:(NSDictionary * _Nonnull)dictionary NS_DESIGNATED_INITIALIZER;
 
 /* Represents country 3 digits code ISO 3166-1 Alpha 3 */
 @property (nonatomic, copy, readonly, nullable) NSString *code;
@@ -54,7 +54,7 @@
 
 @interface APCountry (Unavailable)
 
-- (instancetype)init NS_UNAVAILABLE;
-+ (instancetype)new NS_UNAVAILABLE;
+- (instancetype _Nullable)init NS_UNAVAILABLE;
++ (instancetype _Nullable)new NS_UNAVAILABLE;
 
 @end
